@@ -1,24 +1,46 @@
-# README
+# World of Cats News
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Sample rails app to learn how to upload files with [CarrierWave](https://github.com/carrierwaveuploader/carrierwave) & [Cloudinary](http://cloudinary.com/).
 
-Things you may want to cover:
+[![](https://github.com/Codaisseur/world-of-cats-news/blob/master/app/assets/images/screenshot.png?raw=true)](https://github.com/Codaisseur/world-of-cats-news/blob/master/app/assets/images/screenshot.png?raw=true)
 
-* Ruby version
+## Steps
 
-* System dependencies
+These are the steps I followed when working on this app:
 
-* Configuration
+1. Setting up project
+2. Adding CarrierWave
+3. Updating background color
+4. Removing public uploads folder from Git
+5. Updating background color AGAIN
+6. Adding Cloudinary
+7. Adding Image Versions
 
-* Database creation
+## Database Structure
 
-* Database initialization
+1. NewsItem
 
-* How to run the test suite
+  * title:string
+  * sub_header:text
+  * content:text
+  * image:string
 
-* Services (job queues, cache servers, search engines, etc.)
+## Running Locally
 
-* Deployment instructions
+Make sure you have [Ruby](https://www.ruby-lang.org/en/) and [Bundler](http://bundler.io/) installed.
 
-* ...
+```bash
+git clone git@github.com:Codaisseur/world-of-cats-news.git
+cd world-of-cats-news
+bundle install
+rake db:create db:migrate db:seed
+rails server
+```
+
+## Related documentation
+
+For more information about using CarrierWave and Cloudinary, see these links:
+
+* [Codaisseur Reader](https://read.codaisseur.com/topics/day-12-file-uploads-with-carrierwave/articles/file-uploads-with-carrierwave-cloudinary)
+* [CarrierWave](https://github.com/carrierwaveuploader/carrierwave)
+* [Cloudinary](http://cloudinary.com/documentation/rails_integration#getting_started_guide)
